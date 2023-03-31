@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { withRouter } from "./withRouter";
 
-export default class Login extends Component {
+class Login extends Component {
   constructor() {
     super();
     this.state = this.getInitialState();
+    this.submitForm=this.submitForm.bind(this);
   }
 
   getInitialState = () => {
@@ -57,7 +59,7 @@ export default class Login extends Component {
         myValue.email === this.state.email &&
         myValue.password === this.state.password
       ) {
-        window.location.href = "/Profile";
+        this.props.navigate('/Profile')
       } else {
         toast.error("Authentication Failed!");
       }
@@ -162,3 +164,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default withRouter(Login);

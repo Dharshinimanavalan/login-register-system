@@ -64,3 +64,10 @@ body, html, .App, #root, .auth-wrapper {
   background-repeat: no-repeat;
   background-size:cover;
 }
+
+@media (max-width : 600px) {
+  .auth-inner{
+    width:96%;
+    padding: 20px;
+  }
+}

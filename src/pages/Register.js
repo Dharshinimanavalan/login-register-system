@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {withRouter} from './withRouter';
 
-export default class Register extends Component {
+class Register extends Component {
   constructor() {
     super();
     this.state = this.getInitialState();
+    this.submitForm=this.submitForm.bind(this);
   }
 
   getInitialState = () => {
@@ -78,7 +80,7 @@ export default class Register extends Component {
         contact: "-",
       };
       localStorage.setItem("AUTH", JSON.stringify(auth));
-      window.location.href = "/login";
+      this.props.navigate('/Login')
     }
   };
 
@@ -193,3 +195,5 @@ export default class Register extends Component {
     );
   }
 }
+
+export default withRouter(Register);

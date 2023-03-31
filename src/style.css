@@ -11,3 +11,16 @@
 .modal{
   background-color: #00000073;
 }
+
+.card{
+  width: 75%;
+}
+
+@media(max-width:600px) {
+  .card{
+    width: 95%;
+  }
+  .profile-details .row  .col-7 h5, .profile-details .row  .col-5 h5{
+    font-size: 18px;
+  }
+}

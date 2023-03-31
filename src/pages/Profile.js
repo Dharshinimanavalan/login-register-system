@@ -91,8 +91,8 @@ class Profile extends Component {
     return (
       <div className="bg-container">
         <div className="d-flex align-items-center justify-content-center w-100 h-100">
-          <div className="card w-75">
-            <div className="card-body p-5">
+          <div className="card">
+            <div className="card-body p-3 p-sm-5">
               <div className="row">
                 <div className="col-md-5">
                   <div className="profile text-center">
@@ -127,7 +127,7 @@ class Profile extends Component {
                   </div>
                   <div className="profile-details pt-4">
                     <div className="row">
-                      <div className="col-6">
+                      <div className="col-5 col-sm-6">
                         <h5>Full Name</h5>
                         <h5>Mobile No</h5>
                         <h5>Email</h5>
@@ -135,7 +135,7 @@ class Profile extends Component {
                         <h5>DOB</h5>
                         <h5>Contact</h5>
                       </div>
-                      <div className="col-6">
+                      <div className="col-7 col-sm-6">
                         <h5>: {this.state.fullName}</h5>
                         <h5>: {this.state.mobile}</h5>
                         <h5>: {this.state.email}</h5>
